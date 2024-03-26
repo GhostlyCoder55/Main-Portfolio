@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">GhostlyCoder<i class='bx bx-ghost'></i></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">GhostlyCoder<i class='bx bx-ghost'></i></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./Elements/pp.jpeg" alt="AI generated Picture"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hi there, I'm</p>
+        <h1 class="title">Christopher Ogbonnaya</h1>
+        <p class="section__text__p2">Computer Science Student<br>Software Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./Elements/Resume-Christopher Ogbonnaya.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Let's Talk!
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./Elements/linkedin.png"
+            alt="LinkedIn page"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/christopher-ogbonnaya-773524243/'"
+          />
+          <img
+            src="./Elements/github.png"
+            alt="Github page"
+            class="icon"
+            onclick="location.href='https://github.com/GhostFlare55'"
+          />
+          <img
+            src="./Elements/instagram.png"
+            alt="Instagram page"
+            class="icon"
+            onclick="location.href='https://www.instagram.com/krisos_tom23/'"
+          />
+        </div>
+      </div>
+    </section>
+    <p class="white">Space</p>
+    <section id="about">
+      <h1 class="title1">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./Elements/side-pic.jpeg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+              src="./Elements/education.png"
+              alt="Education icon"
+              class="icon"
+              />
+              <h3>Education</h3>
+              <p class="paragraph">Intl. Baccalaureate High School Graduate <br> B.Sc. Bachelors Degree at UW</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./Elements/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Transferable Skills</h3>
+              <p class="paragraph">Teamwork<br>Problem Solving<br>Creative</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p class="paragraph">
+              I have a good work ethic and learn quickly. As a student pursuing a computer science degree, 
+              my passion for coding motivates me to further expand my knowledge. 
+              I thrive in the fast-paced IT profession since it allows me to pursue my love for tech. 
+              I also enjoy music. I play the guitar for relaxation and self-expression. 
+              I am also a determined guy with a thirst for education and a keen eye toward potential prospects.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./Elements/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <p class="white">Space</p>
+    <section id="experience">
+      <h1 class="title2">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container2">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./Elements/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p class="paragraph">Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Elements/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p class="paragraph">Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Elements/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p class="paragraph">Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container2">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./Elements/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p class="paragraph">Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Elements/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p class="paragraph">Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./Elements/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./Elements/quiz.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Jinx MCQ</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/GhostFlare55/MultipleChoiceGame/blob/main/MCQGame.java'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./Elements/project.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">2nd Project</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+        </div>
+      </div>
+      <img
+        src="./Elements/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <p class="white">Space</p>
+    <section id="contact">
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./Elements/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ogbochri@gmail.com">ogbochri@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./Elements/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/christopher-ogbonnaya-773524243/">My LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="pp2">Copyright &#169; 2024 Christopher Ogbonnaya. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
