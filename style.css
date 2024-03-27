@@ -37,6 +37,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background-color: rgb(189, 189, 189);
 }
 
 .nav-links {
@@ -48,14 +49,14 @@ nav {
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: rgb(189, 189, 189);
 }
 
 a:hover {
-  color: grey;
+  color: white;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: whitesmoke;
 }
 
 .logo {
@@ -97,7 +98,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: rgb(189, 189, 189);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
