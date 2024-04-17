@@ -290,7 +290,7 @@ section {
   background-image: url('./Elements/bf.jpg');/*Add background pic for about here*/
   background-size: cover;
   background-position: center;
-  /*border-radius: 5%;*/
+  border-radius: 5%;
   padding: 5%;
 }
 
@@ -358,7 +358,7 @@ section {
   background-image: url('./Elements/bf.jpg');/*Add background pic for experience here*/
   background-size: cover;
   background-position: center;
-  /*border-radius: 5%;*/
+  border-radius: 5%;
   padding: 5%;
 }
 
