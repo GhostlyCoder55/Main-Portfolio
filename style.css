@@ -53,10 +53,10 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: rgb(255, 0, 0);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: whitesmoke;
+  text-decoration-color: rgb(255, 0, 0);
 }
 
 .logo {
@@ -98,7 +98,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(189, 189, 189);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
