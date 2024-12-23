@@ -458,6 +458,9 @@ article .icon {
   cursor: default;
 }
 
+#col:hover{
+color: #aaa;
+}
 .email-icon {
   height: 2.5rem;
 }
