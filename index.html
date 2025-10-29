@@ -11,19 +11,7 @@
   </head>
   
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">GhostlyCoder<i class='bx bx-ghost'></i></div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
     <nav id="hamburger-nav">
-      <div class="logo">GhostlyCoder<i class='bx bx-ghost'></i></div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -72,46 +60,59 @@
         </div>
       </div>
     </section>
-    <p class="white">Space</p>
     <section id="about">
       <h1 class="title1">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./Elements/side-pic.jpeg"
-            alt="Profile picture" title="My Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
+      <div class="about-container">
+        <div class="about-card-large">
+          <div class="about-header-wrapper">
+            <div class="about-image-wrapper">
               <img
-              src="./Elements/education.png"
-              alt="Education icon"
-              class="icon"
+                src="./Elements/side-pic.jpeg"
+                alt="Profile picture" title="My Profile picture"
+                class="about-pic"
               />
-              <h3>Education</h3>
-              <p class="paragraph">Intl. Baccalaureate High School Graduate <br> B.Sc. Bachelors Degree at UW</p>
             </div>
-            <div class="details-container">
-              <img
-                src="./Elements/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Transferable Skills</h3>
-              <p class="paragraph">Teamwork<br>Problem Solving<br>Creative</p>
-            </div>
+            <h2 class="about-sub-title">Personal Information</h2>
           </div>
-          <div class="text-container">
-            <p class="paragraph">
+          <div class="about-text-wrapper">
+            <p class="about-paragraph">
               I have a good work ethic and learn quickly. As a student pursuing a computer science degree, 
               my passion for coding motivates me to further expand my knowledge. 
               I thrive in the fast-paced IT profession since it allows me to pursue my love for tech. 
               I also enjoy music. I play the guitar for relaxation and self-expression. 
               I am also a determined guy with a thirst for education and a keen eye toward potential prospects.
             </p>
+          </div>
+        </div>
+        <div class="about-cards-bottom">
+          <div class="about-card">
+            <div class="about-card-header">
+              <img
+                src="./Elements/education.png"
+                alt="Education icon"
+                class="about-card-icon"
+              />
+              <h3 class="about-sub-title">Education</h3>
+            </div>
+            <div class="about-card-content">
+              <p class="about-detail-text">Intl. Baccalaureate High School Graduate</p>
+              <p class="about-detail-text">B.Sc. Bachelors Degree at UW</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-header">
+              <img
+                src="./Elements/experience.png"
+                alt="Experience icon"
+                class="about-card-icon"
+              />
+              <h3 class="about-sub-title">Transferable Skills</h3>
+            </div>
+            <div class="about-card-content">
+              <p class="about-detail-text">Teamwork</p>
+              <p class="about-detail-text">Problem Solving</p>
+              <p class="about-detail-text">Creative</p>
+            </div>
           </div>
         </div>
       </div>
@@ -122,74 +123,97 @@
         onclick="location.href='./#experience'"
       />
     </section>
-    <p class="white">Space</p>
     <section id="experience">
       <h1 class="title2">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container2">
+      <div class="experience-container">
+        <div class="experience-card">
+          <div class="experience-header">
             <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./Elements/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p class="paragraph">Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Elements/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p class="paragraph">Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Elements/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p class="paragraph">Basic</p>
-                </div>
-              </article>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img
+                src="./Elements/checkmark.png"
+                alt="Experience icon"
+                class="skill-icon"
+              />
+              <div class="skill-content">
+                <h3>HTML</h3>
+                <p class="skill-level">Intermediate</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img
+                src="./Elements/checkmark.png"
+                alt="Experience icon"
+                class="skill-icon"
+              />
+              <div class="skill-content">
+                <h3>CSS</h3>
+                <p class="skill-level">Intermediate</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img
+                src="./Elements/checkmark.png"
+                alt="Experience icon"
+                class="skill-icon"
+              />
+              <div class="skill-content">
+                <h3>JavaScript</h3>
+                <p class="skill-level">Intermediate</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img
+                src="./Elements/checkmark.png"
+                alt="Experience icon"
+                class="skill-icon"
+              />
+              <div class="skill-content">
+                <h3>React</h3>
+                <p class="skill-level">Basic</p>
+              </div>
             </div>
           </div>
-          <div class="details-container2">
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
             <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./Elements/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p class="paragraph">Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Elements/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p class="paragraph">Intermediate</p>
-                </div>
-              </article>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img
+                src="./Elements/checkmark.png"
+                alt="Experience icon"
+                class="skill-icon"
+              />
+              <div class="skill-content">
+                <h3>Java</h3>
+                <p class="skill-level">Advanced</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img
+                src="./Elements/checkmark.png"
+                alt="Experience icon"
+                class="skill-icon"
+              />
+              <div class="skill-content">
+                <h3>Python</h3>
+                <p class="skill-level">Intermediate</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <img
+                src="./Elements/checkmark.png"
+                alt="Experience icon"
+                class="skill-icon"
+              />
+              <div class="skill-content">
+                <h3>Swift</h3>
+                <p class="skill-level">Basic</p>
+              </div>
             </div>
           </div>
         </div>
@@ -203,60 +227,96 @@
     </section>
     <section id="projects">
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./Elements/quiz.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Jinx MCQ</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/GhostFlare55/MultipleChoiceGame/blob/main/MCQGame.java'"
-              >
-                Github Code
-              </button>
-            </div>
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="project-image-container">
+            <img
+              src="./Elements/quiz.jpg"
+              alt="Project 1"
+              class="project-img"
+            />
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./Elements/elemental.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">AirBender Search</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/GhostFlare55/AvatarBendingIndicator/blob/main/AvatarBendingIndicator.java'"
-              >
-                Github Code
-              </button>
+          <h2 class="experience-sub-title project-title">Jinx MCQ</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/GhostFlare55/MultipleChoiceGame/blob/main/MCQGame.java'"
+            >
+              Github Code
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img
-            src="./Elements/color.jpg"
-            alt="Project 3"
-            class="project-img"
-          />
+        <div class="project-card">
+          <div class="project-image-container">
+            <img
+              src="./Elements/elemental.jpeg"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">BenderSearch</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/GhostFlare55/AvatarBendingIndicator/blob/main/AvatarBendingIndicator.java'"
+            >
+              Github Code
+            </button>
+          </div>
         </div>
-        <h2 class="experience-sub-title project-title">ColorTypie</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/GhostFlare55/ColorTypie/blob/main/ColorTypie.py'"
-          >
-            Github Code
-          </button>
+        <div class="project-card">
+          <div class="project-image-container">
+            <img
+              src="./Elements/color.jpg"
+              alt="Project 3"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">ColorTypie</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/GhostFlare55/ColorTypie/blob/main/ColorTypie.py'"
+            >
+              Github Code
+            </button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image-container">
+            <img
+              src="./Elements/CheerUpPNG.png"
+              alt="Project 4"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">CheerUp!</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/GhostlyCoder55/CheerU/blob/main/CheerUp!/ContentView.swift'"
+            >
+              Github Code
+            </button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image-container">
+            <img
+              src="./Elements/drawing.png"
+              alt="Project 5"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">CookieNotes</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/GhostlyCoder55/CookieNotes/blob/main/CookieNotes/ContentView.swift'"
+            >
+              Github Code
+            </button>
+          </div>
         </div>
       </div>
       <img
@@ -266,7 +326,6 @@
         onclick="location.href='./#contact'"
       />
     </section>
-    <p class="white">Space</p>
     <section id="contact">
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
@@ -281,7 +340,7 @@
       </div>
     </section>
     <footer>
-      <p class="pp2">Copyright &#169; 2024 Christopher Ogbonnaya. All Rights Reserved.</p>
+      <p class="pp2">Copyright &#169; 2025 Christopher Ogbonnaya. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
