@@ -1,43 +1,34 @@
 @media screen and (max-width: 1400px) {
+  section {
+    max-width: 1000px;
+    padding: 2rem 1rem;
+  }
   #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+    min-height: 50vh;
+    gap: 2rem;
   }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
+  .section__pic-container {
+    height: 250px;
+    width: 250px;
   }
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
   }
   .project-image-container {
-    height: 180px;
-  }
-  .article-container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
+    height: 140px;
   }
   .experience-container {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.5rem;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
-  .about-header-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-image-wrapper {
-    width: 200px;
-    height: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
   }
   .about-cards-bottom {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  .about-image-wrapper {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -46,61 +37,48 @@
     top: 1.5rem;
     right: 1.5rem;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+  section {
+    max-width: 900px;
+    padding: 1.5rem 1rem;
   }
-  #profile,
-  .section-container {
-    display: block;
+  #profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    overflow: hidden;
   }
   .arrow {
     display: none;
   }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem 0;
-  }
-  .project-image-container {
-    height: 160px;
-  }
-  .article-container {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
   }
-  .experience-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+  .project-image-container {
+    height: 120px;
   }
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .about-header-wrapper {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
   .about-image-wrapper {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
   }
   .about-cards-bottom {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
@@ -161,112 +139,64 @@
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  section {
+    max-width: 100%;
+    padding: 1rem 0.5rem;
   }
   #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    padding: 1rem 0;
+    gap: 1rem;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
   }
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   .title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .title1,
   .title2 {
-    font-size: 1.75rem;
-  }
-  .text-container {
-    text-align: justify;
+    font-size: 1.5rem;
   }
   .projects-container {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem 0;
+    gap: 1rem;
   }
   .project-card {
     padding: 1rem;
   }
   .project-image-container {
-    height: 120px;
-  }
-  .article-container {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-  article {
-    padding: 0.8rem;
+    height: 100px;
   }
   .experience-container {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem 0;
-  }
-  .experience-card {
-    padding: 1.5rem;
-  }
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-  .skill-item {
-    padding: 0.8rem;
-  }
-  .about-container {
-    gap: 1.5rem;
-  }
-  .about-card {
-    padding: 1.5rem;
-  }
-  .about-header-wrapper {
-    flex-direction: column;
-    text-align: center;
     gap: 1rem;
   }
+  .experience-card {
+    padding: 1rem;
+  }
+  .about-container {
+    gap: 1rem;
+  }
+  .about-card {
+    padding: 1rem;
+  }
   .about-image-wrapper {
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
   }
   .about-cards-bottom {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+  .contact-info-upper-container {
+    padding: 0.75rem;
+  }
+  footer {
+    padding: 1rem 0;
   }
 }

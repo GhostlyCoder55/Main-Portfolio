@@ -129,15 +129,19 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem 4rem;
+  padding: 3rem 0;
+  margin: 0 auto;
+  max-width: 1200px;
   box-sizing: border-box;
-  min-height: fit-content;
+  min-height: auto;
+}
+
+section:first-of-type {
+  padding-top: 2rem;
 }
 
 section:last-of-type {
-  margin-bottom: 0;
+  padding-bottom: 2rem;
 }
 
 .section-container {
@@ -157,21 +161,28 @@ section:last-of-type {
 #profile {
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  align-items: center;
+  gap: 3rem;
+  min-height: 60vh;
+  padding: 2rem 0;
 }
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   margin: auto 0;
+  flex-shrink: 0;
 }
 
 .section__pic-container img {
   border-radius: 50%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .section__pic-container img:hover {
@@ -299,18 +310,17 @@ section:last-of-type {
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-  padding: 2rem 0;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .about-card-large {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
   border: 1px solid rgba(163, 163, 163, 0.3);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -323,19 +333,19 @@ section:last-of-type {
 
 .about-header-wrapper {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 2px solid rgba(129, 13, 145, 0.2);
 }
 
 .about-image-wrapper {
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,17 +386,17 @@ section:last-of-type {
 
 .about-cards-bottom {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 .about-card {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
   border: 1px solid rgba(163, 163, 163, 0.3);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -502,19 +512,18 @@ section:last-of-type {
 
 .experience-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  padding: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .experience-card {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
   border: 1px solid rgba(163, 163, 163, 0.3);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -623,19 +632,18 @@ article .icon {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  padding: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .project-card {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 1.5rem;
-  padding: 1.5rem;
+  border-radius: 1rem;
+  padding: 1.25rem;
   border: 1px solid rgba(163, 163, 163, 0.3);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -650,10 +658,10 @@ article .icon {
 
 .project-image-container {
   width: 100%;
-  height: 200px;
+  height: 160px;
   overflow: hidden;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -698,7 +706,8 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 40vh;
+  padding: 2rem 0;
 }
 
 .contact-info-upper-container {
