@@ -128,6 +128,15 @@
     flex-direction: column;
     text-align: center;
   }
+  /* Fix awkward justification on tablets */
+  .about-paragraph,
+  .text-container p,
+  .paragraph {
+    text-align: left;
+    hyphens: auto;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
   .about-image-wrapper {
     width: 120px;
     height: 120px;
@@ -184,6 +193,17 @@
   }
   .about-card {
     padding: 1rem;
+  }
+  /* Remove justification and avoid uneven spacing on phones */
+  .about-paragraph,
+  .text-container p,
+  .paragraph {
+    text-align: left;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    letter-spacing: normal;
+    word-spacing: normal;
   }
   .about-image-wrapper {
     width: 60px;
