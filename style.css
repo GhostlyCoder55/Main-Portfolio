@@ -739,20 +739,24 @@ article .icon {
 
 .contact-icon {
   cursor: default;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
-#col {
+.contact-link {
   color: #810d91;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-#col:hover {
+.contact-link:hover {
   color: #6a0a7a;
   text-decoration: none;
 }
 .email-icon {
-  height: 2.5rem;
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 /* Minimal footer */
