@@ -6,9 +6,9 @@ function toggleMenu() {
   const icon = document.querySelector(".hamburger-icon");
   
   if (menu && icon) {
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
 }
 
 // Close mobile menu when clicking outside
