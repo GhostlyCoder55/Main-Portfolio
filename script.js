@@ -29,6 +29,11 @@ document.addEventListener("click", (event) => {
   }
 });
 
+const copyrightYear = document.getElementById("copyright-year");
+if (copyrightYear) {
+  copyrightYear.textContent = new Date().getFullYear();
+}
+
 // Smooth scroll enhancement
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
