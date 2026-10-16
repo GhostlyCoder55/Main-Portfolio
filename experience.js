@@ -22,32 +22,45 @@ const backendSkills = [
   { name: "Node.js", level: "Basic", icon: `${ICON}/nodejs/nodejs-original.svg` },
 ];
 
-function SkillCard({ name, level, icon }) {
+function SkillCard({ name, level, icon, decorative }) {
   return html`
-    <article className="skill-card">
+    <article className=${`skill-card${decorative ? " skill-card--clone" : ""}`} aria-hidden=${decorative || undefined}>
       <div className="skill-card-logo">
-        <img src=${icon} alt=${`${name} logo`} className="skill-card-icon" />
+        <img src=${icon} alt=${decorative ? "" : `${name} logo`} className="skill-card-icon" />
       </div>
       <p className="skill-level">${level}</p>
     </article>
   `;
 }
 
-function SkillScroller({ skills, label }) {
+function SkillSet({ skills, decorative, keyPrefix }) {
+  return html`
+    <div className="skill-track-set" aria-hidden=${decorative || undefined}>
+      ${skills.map(
+        (skill) => html`
+          <${SkillCard}
+            key=${`${keyPrefix}-${skill.name}`}
+            name=${skill.name}
+            level=${skill.level}
+            icon=${skill.icon}
+            decorative=${decorative}
+          />
+        `
+      )}
+    </div>
+  `;
+}
+
+function SkillScroller({ skills, label, duration }) {
   return html`
     <div className="skill-row">
       <h2 className="experience-sub-title skill-row-title">${label}</h2>
       <div className="skill-scroller">
-        ${skills.map(
-          (skill) => html`
-            <${SkillCard}
-              key=${skill.name}
-              name=${skill.name}
-              level=${skill.level}
-              icon=${skill.icon}
-            />
-          `
-        )}
+        <div className="skill-track" style=${{ animationDuration: duration }}>
+          <${SkillSet} skills=${skills} keyPrefix="a" />
+          <${SkillSet} skills=${skills} decorative=${true} keyPrefix="b" />
+          <${SkillSet} skills=${skills} decorative=${true} keyPrefix="c" />
+        </div>
       </div>
     </div>
   `;
@@ -56,8 +69,8 @@ function SkillScroller({ skills, label }) {
 function Experience() {
   return html`
     <div className="experience-board">
-      <${SkillScroller} label="Frontend Development" skills=${frontendSkills} />
-      <${SkillScroller} label="Backend Development" skills=${backendSkills} />
+      <${SkillScroller} label="Frontend Development" skills=${frontendSkills} duration="32s" />
+      <${SkillScroller} label="Backend Development" skills=${backendSkills} duration="38s" />
     </div>
   `;
 }
