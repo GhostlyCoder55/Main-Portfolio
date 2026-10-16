@@ -1,7 +1,7 @@
 @media screen and (max-width: 1400px) {
   section {
-    max-width: 1000px;
-    padding: 2rem 1rem;
+    max-width: 1040px;
+    padding: 4.5rem 2rem;
   }
   #profile {
     min-height: 50vh;
@@ -12,23 +12,20 @@
     width: 250px;
   }
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
   }
   .project-image-container {
-    height: 140px;
+    height: auto;
   }
-  .experience-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
+  .project-title {
+    font-size: 1.1rem;
   }
-  .about-cards-bottom {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.25rem;
+  .skill-card {
+    flex-basis: 148px;
   }
-  .about-image-wrapper {
-    width: 100px;
-    height: 100px;
+  .about-intro {
+    gap: 2.5rem;
   }
 }
 
@@ -38,8 +35,8 @@
     right: 1.5rem;
   }
   section {
-    max-width: 900px;
-    padding: 1.5rem 1rem;
+    max-width: 860px;
+    padding: 4rem 1.75rem;
   }
   #profile {
     flex-direction: column;
@@ -47,38 +44,54 @@
     gap: 1.5rem;
     min-height: auto;
   }
+  .section__text {
+    align-items: center;
+    text-align: center;
+  }
+  .title {
+    text-align: center;
+  }
+  #profile .btn-container,
+  #socials-container {
+    justify-content: center;
+  }
   .section__pic-container {
     width: 200px;
     height: 200px;
     margin: 0 auto 1rem;
     overflow: hidden;
   }
-  .arrow {
-    display: none;
-  }
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  .project-card {
+    padding: 0.75rem;
   }
   .project-image-container {
-    height: 120px;
+    height: auto;
   }
-  .experience-container {
+  .project-title {
+    font-size: 1rem;
+  }
+  .skill-card {
+    flex-basis: 140px;
+  }
+  .skill-card-logo {
+    width: 76px;
+    height: 76px;
+  }
+  .about-intro {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2rem;
   }
-  .about-header-wrapper {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+  .about-photo {
+    aspect-ratio: 5 / 4;
+    object-position: 40% 12%;
   }
-  .about-image-wrapper {
-    width: 80px;
-    height: 80px;
-  }
-  .about-cards-bottom {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .about-facts,
+  .transfer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -88,72 +101,52 @@
     margin: 0 2rem;
   }
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
   }
   .project-image-container {
-    height: 150px;
+    height: auto;
   }
-  .experience-container {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  .about-header-wrapper {
-    flex-direction: row;
-    text-align: left;
-  }
-  .about-image-wrapper {
-    width: 140px;
-    height: 140px;
+  .skill-card {
+    flex-basis: 150px;
   }
 }
 
 /* iPad portrait */
 @media screen and (max-width: 768px) {
   section {
-    margin: 0 1.5rem;
+    margin: 0 1.25rem;
+    padding: 3.5rem 1.25rem;
   }
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
   .project-image-container {
-    height: 130px;
+    height: auto;
   }
-  .experience-container {
+  .skill-row-title {
+    font-size: 1.2rem;
+  }
+  .skill-card {
+    flex-basis: 136px;
+  }
+  .about-shell {
+    gap: 2.5rem;
+  }
+  .about-facts,
+  .transfer-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .about-header-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-  /* Fix awkward justification on tablets */
-  .about-paragraph,
-  .text-container p,
-  .paragraph {
-    text-align: left;
-    hyphens: auto;
-    word-spacing: normal;
-    letter-spacing: normal;
-  }
-  .about-image-wrapper {
-    width: 120px;
-    height: 120px;
-  }
-  .about-cards-bottom {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   section {
     max-width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 3rem 1.25rem;
   }
   #profile {
-    padding: 1rem 0;
+    padding: 3rem 1.25rem;
     gap: 1rem;
   }
   .section__pic-container {
@@ -167,6 +160,9 @@
   .title {
     font-size: 1.5rem;
   }
+  .section-title {
+    font-size: 1.75rem;
+  }
   .title1,
   .title2 {
     font-size: 1.5rem;
@@ -179,42 +175,29 @@
     padding: 1rem;
   }
   .project-image-container {
-    height: 100px;
+    height: auto;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .experience-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .skill-row-title {
+    font-size: 1.1rem;
   }
-  .experience-card {
-    padding: 1rem;
+  .skill-card {
+    flex-basis: 128px;
+    padding: 0.9rem 0.7rem;
   }
-  .about-container {
-    gap: 1rem;
+  .skill-card-logo {
+    width: 68px;
+    height: 68px;
   }
-  .about-card {
-    padding: 1rem;
+  .about-close {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  /* Remove justification and avoid uneven spacing on phones */
-  .about-paragraph,
-  .text-container p,
-  .paragraph {
-    text-align: left;
-    hyphens: auto;
-    word-break: normal;
-    overflow-wrap: anywhere;
-    letter-spacing: normal;
-    word-spacing: normal;
-  }
-  .about-image-wrapper {
-    width: 60px;
-    height: 60px;
-  }
-  .about-cards-bottom {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .contact-info-upper-container {
-    padding: 0.75rem;
+  .contact-btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
   }
   footer {
     padding: 1rem 0;

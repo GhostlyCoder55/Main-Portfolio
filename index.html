@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GhostlyCoder Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="style.css?v=10" />
+    <link rel="stylesheet" href="mediaqueries.css?v=7" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   
@@ -33,7 +33,9 @@
       <div class="section__text">
         <p class="section__text__p1">Hi there, I'm</p>
         <h1 class="title">Christopher Ogbonnaya</h1>
-        <p class="section__text__p2">Software Developer<br>Data Scientist</p>
+        <p class="section__text__p2" aria-live="polite">
+          <span id="role-typewriter"></span><span class="typewriter-cursor" aria-hidden="true"></span>
+        </p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -57,208 +59,142 @@
             class="icon"
             onclick="location.href='https://github.com/GhostlyCoder55'"
           />
+          <img
+            src="./Elements/instagram.svg"
+            alt="Instagram page"
+            class="icon"
+            onclick="location.href='https://www.instagram.com/chrisyius_/'"
+          />
         </div>
       </div>
     </section>
     <section id="about">
-      <h1 class="title1">About Me</h1>
-      <div class="about-container">
-        <div class="about-card-large">
-          <div class="about-header-wrapper">
-            <div class="about-image-wrapper">
-              <img
-                src="./Elements/side-pic.jpeg"
-                alt="Profile picture" title="My Profile picture"
-                class="about-pic"
-              />
-            </div>
-            <h2 class="about-sub-title">Personal Information</h2>
-          </div>
-          <div class="about-text-wrapper">
-            <p class="about-paragraph">
-              I'm an aspiring and motivated Software Developer with years of hands-on experience building projects in web development, data science, and software development. 
-              Comfortable with Python, SQL, JS and more. I enjoy building useful things, learning new tech, and turning ideas into working products. 
+      <h1 class="section-title">About</h1>
+      <div class="about-shell">
+        <div class="about-intro">
+          <figure class="about-photo-frame">
+            <img
+              src="./Elements/side-pic.jpeg"
+              alt="Christopher Ogbonnaya seated by a window at the University of Winnipeg Student Services Centre"
+              class="about-photo"
+            />
+          </figure>
+          <div class="about-copy">
+            <p class="about-eyebrow">A little about me</p>
+            <h2 class="about-heading">The person behind the projects.</h2>
+            <p class="about-lead">
+              I'm an aspiring and motivated Software Developer with years of hands-on experience building projects in web development, data science, and software development. Comfortable with Python, SQL, JS and more. I enjoy building useful things, learning new tech, and turning ideas into working products.
+            </p>
+            <p class="about-statement">
               Currently looking for an opportunity to grow and build in this AI driven tech world. Moreover, I'm always eager to explore new opportunities that challenge me to innovate.
             </p>
+            <dl class="about-facts">
+              <div class="about-fact">
+                <dt>Study</dt>
+                <dd>B.Sc. at the University of Winnipeg</dd>
+              </div>
+              <div class="about-fact">
+                <dt>Focus</dt>
+                <dd>Web development, data science, and software</dd>
+              </div>
+              <div class="about-fact">
+                <dt>Tools</dt>
+                <dd>Python, SQL, JavaScript, and more</dd>
+              </div>
+              <div class="about-fact">
+                <dt>Drive</dt>
+                <dd>Turning ideas into working products</dd>
+              </div>
+            </dl>
           </div>
         </div>
-        <div class="about-cards-bottom">
-          <div class="about-card">
-            <div class="about-card-header">
-              <img
-                src="./Elements/education.png"
-                alt="Education icon"
-                class="about-card-icon"
-              />
-              <h3 class="about-sub-title">Education</h3>
+
+        <div class="about-block">
+          <h3 class="about-block-title">Education</h3>
+          <ol class="education-list">
+            <li class="education-item">
+              <p class="education-program">B.Sc. Bachelors Degree</p>
+              <p class="education-place">University of Winnipeg</p>
+            </li>
+            <li class="education-item">
+              <p class="education-program">International Baccalaureate</p>
+              <p class="education-place">High School Graduate</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="about-block">
+          <h3 class="about-block-title">Licenses &amp; Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item">
+              <h4 class="cert-name">Python</h4>
+              <p class="cert-meta">freeCodeCamp · Issued October 2026</p>
+              <p class="cert-id">Credential ID: ghostlycoder-pyv9</p>
             </div>
-            <div class="about-card-content">
-              <p class="about-detail-text">Intl. Baccalaureate High School Graduate</p>
-              <p class="about-detail-text">B.Sc. Bachelors Degree at UW</p>
+            <div class="cert-item">
+              <h4 class="cert-name">Web Development Fundamentals</h4>
+              <p class="cert-meta">IBM · Issued October 2026</p>
+            </div>
+            <div class="cert-item">
+              <h4 class="cert-name">SQL (Intermediate) Certificate</h4>
+              <p class="cert-meta">HackerRank · Issued October 2026</p>
+            </div>
+            <div class="cert-item">
+              <h4 class="cert-name">Software Engineer Intern Certificate</h4>
+              <p class="cert-meta">HackerRank · Issued October 2026</p>
+            </div>
+            <div class="cert-item">
+              <h4 class="cert-name">Google AI Essentials</h4>
+              <p class="cert-meta">Google · Issued June 2026</p>
+            </div>
+            <div class="cert-item">
+              <h4 class="cert-name">Digital Marketing Certified</h4>
+              <p class="cert-meta">HubSpot Academy · Issued June 2026</p>
+              <p class="cert-id">Credential ID: tdt23pxv</p>
+            </div>
+            <div class="cert-item">
+              <h4 class="cert-name">AI Infrastructure and Operations Fundamentals</h4>
+              <p class="cert-meta">NVIDIA · Issued July 2024</p>
             </div>
           </div>
-          <div class="about-card">
-            <div class="about-card-header">
-              <img
-                src="./Elements/experience.png"
-                alt="Experience icon"
-                class="about-card-icon"
-              />
-              <h3 class="about-sub-title">Transferable Skills</h3>
+        </div>
+
+        <div class="about-block">
+          <h3 class="about-block-title">Transferable Skills</h3>
+          <div class="transfer-grid">
+            <div class="transfer-item">
+              <p class="transfer-label">Collaboration</p>
+              <p class="transfer-value">Teamwork</p>
             </div>
-            <div class="about-card-content">
-              <p class="about-detail-text">Teamwork</p>
-              <p class="about-detail-text">Problem Solving</p>
-              <p class="about-detail-text">Creative</p>
+            <div class="transfer-item">
+              <p class="transfer-label">Problem-Solving</p>
+              <p class="transfer-value">Finding practical solutions</p>
+            </div>
+            <div class="transfer-item">
+              <p class="transfer-label">Creative</p>
+              <p class="transfer-value">Turning ideas into products</p>
             </div>
           </div>
+        </div>
+
+        <div class="about-close">
+          <p>Want to see how this shows up in practice?</p>
+          <button
+            class="btn btn-color-2 about-close-btn"
+            type="button"
+            onclick="location.href='#projects'"
+          >
+            View projects
+          </button>
         </div>
       </div>
-      <img
-        src="./Elements/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
     </section>
     <section id="experience">
-      <h1 class="title2">Experience</h1>
-      <div class="experience-container">
-        <div class="experience-card">
-          <div class="experience-header">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
-                alt="HTML5 icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>HTML</h3>
-                <p class="skill-level">Intermediate</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
-                alt="CSS3 icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>CSS</h3>
-                <p class="skill-level">Intermediate</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-                alt="JavaScript icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>JavaScript</h3>
-                <p class="skill-level">Intermediate</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                alt="React icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>React</h3>
-                <p class="skill-level">Basic</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                alt="TypeScript icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>TypeScript</h3>
-                <p class="skill-level">Basic</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="experience-card">
-          <div class="experience-header">
-            <h2 class="experience-sub-title">Backend Development</h2>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                alt="Java icon"
-                class="skill-icon"
-                style="color: #007396;"
-              />
-              <div class="skill-content">
-                <h3>Java</h3>
-                <p class="skill-level">Advanced</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                alt="Python icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>Python</h3>
-                <p class="skill-level">Intermediate</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                alt="SQL icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>SQL</h3>
-                <p class="skill-level">Intermediate</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
-                alt="Swift icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>Swift</h3>
-                <p class="skill-level">Basic</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                alt="Node.js icon"
-                class="skill-icon"
-              />
-              <div class="skill-content">
-                <h3>Node.js</h3>
-                <p class="skill-level">Basic</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./Elements/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
+      <h1 class="section-title">Skills</h1>
+      <div id="experience-root"></div>
     </section>
     <section id="projects">
-      <h1 class="title">Projects</h1>
+      <h1 class="section-title">Projects</h1>
       <div class="projects-container">
         <div class="project-card">
           <div class="project-image-container">
@@ -361,37 +297,50 @@
           </div>
         </div>
       </div>
-      <img
-        src="./Elements/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
     </section>
     <section id="contact">
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
+      <h1 class="section-title">Get in touch</h1>
+      <p class="contact-lead">Open to conversations about software, web, and data.</p>
+      <div class="btn-container contact-btn-container">
+        <button
+          class="btn btn-color-2 contact-btn"
+          type="button"
+          onclick="location.href='https://www.linkedin.com/in/christopher-ogbonnaya-773524243/'"
+        >
           <img
             src="./Elements/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
+            alt=""
+            class="contact-btn-icon"
           />
-          <p><a href="https://www.linkedin.com/in/christopher-ogbonnaya-773524243/" class="contact-link">My LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container">
+          My LinkedIn
+        </button>
+        <button
+          class="btn btn-color-2 contact-btn"
+          type="button"
+          onclick="location.href='mailto:ogbochri@gmail.com?subject=Contact%20from%20Portfolio'"
+        >
           <img
             src="./Elements/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
+            alt=""
+            class="contact-btn-icon contact-btn-icon-email"
           />
-          <p><a href="mailto:ogbochri@gmail.com?subject=Contact%20from%20Portfolio" class="contact-link">Email Me</a></p>
-        </div>
+          Email Me
+        </button>
       </div>
     </section>
     <footer class="mini-footer">
       <p>&#169; <span id="copyright-year">2026</span> Christopher Ogbonnaya portfolio. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19",
+          "react-dom/client": "https://esm.sh/react-dom@19/client",
+          "htm": "https://esm.sh/htm@3.1.1"
+        }
+      }
+    </script>
+    <script type="module" src="./experience.js"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>

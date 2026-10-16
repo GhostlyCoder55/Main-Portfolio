@@ -29,6 +29,57 @@ document.addEventListener("click", (event) => {
   }
 });
 
+const roles = ["Software Developer", "Web Developer", "Data Scientist"];
+const roleTypewriter = document.getElementById("role-typewriter");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const TYPE_MS = 80;
+const DELETE_MS = 50;
+const HOLD_MS = 3000;
+
+if (roleTypewriter && roleTypewriter.dataset.bound !== "true") {
+  roleTypewriter.dataset.bound = "true";
+  let roleIndex = 0;
+  let charIndex = 0;
+
+  const typeNextCharacter = () => {
+    const currentRole = roles[roleIndex];
+    charIndex += 1;
+    roleTypewriter.textContent = currentRole.slice(0, charIndex);
+
+    if (charIndex < currentRole.length) {
+      window.setTimeout(typeNextCharacter, TYPE_MS);
+      return;
+    }
+
+    window.setTimeout(deleteNextCharacter, HOLD_MS);
+  };
+
+  const deleteNextCharacter = () => {
+    const currentRole = roles[roleIndex];
+    charIndex -= 1;
+    roleTypewriter.textContent = currentRole.slice(0, Math.max(charIndex, 0));
+
+    if (charIndex > 0) {
+      window.setTimeout(deleteNextCharacter, DELETE_MS);
+      return;
+    }
+
+    roleIndex = (roleIndex + 1) % roles.length;
+    charIndex = 0;
+    window.setTimeout(typeNextCharacter, TYPE_MS);
+  };
+
+  if (prefersReducedMotion) {
+    roleTypewriter.textContent = roles[0];
+    window.setInterval(() => {
+      roleIndex = (roleIndex + 1) % roles.length;
+      roleTypewriter.textContent = roles[roleIndex];
+    }, HOLD_MS);
+  } else {
+    typeNextCharacter();
+  }
+}
+
 const copyrightYear = document.getElementById("copyright-year");
 if (copyrightYear) {
   copyrightYear.textContent = new Date().getFullYear();
