@@ -765,7 +765,7 @@ section:last-of-type {
   will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  animation: skill-marquee 32s linear infinite;
+  animation: skill-marquee 31s linear infinite;
 }
 
 .skill-track-set {
