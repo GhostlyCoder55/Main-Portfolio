@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GhostlyCoder Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=15" />
+    <link rel="stylesheet" href="style.css?v=18" />
     <link rel="stylesheet" href="mediaqueries.css?v=10" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
@@ -13,17 +13,24 @@
   <body>
     <nav id="hamburger-nav">
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <button
+          type="button"
+          class="hamburger-icon"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          onclick="toggleMenu()"
+        >
           <span></span>
           <span></span>
           <span></span>
-        </div>
-        <div class="menu-links">
+        </button>
+        <ul class="menu-links" id="site-menu">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+        </ul>
       </div>
     </nav>
     <section id="profile">
@@ -306,22 +313,22 @@
       <h1 class="section-title">Get in touch</h1>
       <p class="contact-lead">Open to conversations about software, web, and data.</p>
       <div class="btn-container contact-btn-container">
-        <button
+        <a
           class="contact-icon-btn"
-          type="button"
+          href="https://www.linkedin.com/in/christopher-ogbonnaya-773524243/"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
-          onclick="location.href='https://www.linkedin.com/in/christopher-ogbonnaya-773524243/'"
         >
           <img src="./Elements/linkedin.png" alt="" />
-        </button>
-        <button
+        </a>
+        <a
           class="contact-icon-btn"
-          type="button"
-          aria-label="Email"
-          onclick="location.href='mailto:ogbochri@gmail.com?subject=Contact%20from%20Portfolio'"
+          href="mailto:ogbochri@gmail.com"
+          aria-label="Email ogbochri@gmail.com"
         >
           <img src="./Elements/gmail.svg" alt="" />
-        </button>
+        </a>
       </div>
     </section>
     <footer class="mini-footer">
@@ -336,7 +343,7 @@
         }
       }
     </script>
-    <script type="module" src="./experience.js?v=4"></script>
-    <script src="script.js?v=4"></script>
+    <script type="module" src="./experience.js?v=6"></script>
+    <script src="script.js?v=5"></script>
   </body>
 </html>

@@ -69,8 +69,8 @@ function SkillScroller({ skills, label, duration }) {
 function Experience() {
   return html`
     <div className="experience-board">
-      <${SkillScroller} label="Frontend Development" skills=${frontendSkills} duration="31s" />
-      <${SkillScroller} label="Backend Development" skills=${backendSkills} duration="37s" />
+      <${SkillScroller} label="Frontend Development" skills=${frontendSkills} duration="14s" />
+      <${SkillScroller} label="Backend Development" skills=${backendSkills} duration="16s" />
     </div>
   `;
 }

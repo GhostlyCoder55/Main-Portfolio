@@ -1,14 +1,20 @@
-/**
- * Toggle mobile menu visibility
- */
-function toggleMenu() {
+function setMenuOpen(isOpen) {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
-  
-  if (menu && icon) {
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+
+  if (!menu || !icon) {
+    return;
+  }
+
+  menu.classList.toggle("open", isOpen);
+  icon.classList.toggle("open", isOpen);
+  icon.setAttribute("aria-expanded", String(isOpen));
+  icon.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 }
+
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  setMenuOpen(!(menu && menu.classList.contains("open")));
 }
 
 // Close mobile menu when clicking outside
@@ -24,8 +30,13 @@ document.addEventListener("click", (event) => {
     !hamburgerNav.contains(event.target) &&
     menu.classList.contains("open")
   ) {
-    menu.classList.remove("open");
-    icon.classList.remove("open");
+    setMenuOpen(false);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setMenuOpen(false);
   }
 });
 
