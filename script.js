@@ -34,7 +34,7 @@ const roleTypewriter = document.getElementById("role-typewriter");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const TYPE_MS = 80;
 const DELETE_MS = 50;
-const HOLD_MS = 3000;
+const HOLD_MS = 1000;
 
 if (roleTypewriter && roleTypewriter.dataset.bound !== "true") {
   roleTypewriter.dataset.bound = "true";

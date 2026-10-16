@@ -634,8 +634,13 @@ section:last-of-type {
 
   .about-photo-frame:hover .about-photo,
   .section__pic-container:hover img,
-  .project-card:hover .project-img {
+  .project-card:hover .project-img,
+  .project-card:hover .project-img--openly {
     transform: none;
+  }
+
+  .project-img--openly {
+    transform: scale(1.2);
   }
 
   .skill-track {
@@ -656,6 +661,7 @@ section:last-of-type {
   }
 
   .skill-scroller {
+    -webkit-mask-image: none;
     mask-image: none;
   }
 }
@@ -733,36 +739,58 @@ section:last-of-type {
 
 .skill-scroller {
   overflow: hidden;
+  width: 100%;
   padding: 0.35rem 0 0.85rem;
   cursor: default;
-  mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 10%,
+    #000 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 10%,
+    #000 90%,
+    transparent 100%
+  );
 }
 
 .skill-track {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: nowrap;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   animation: skill-marquee 32s linear infinite;
 }
 
 .skill-track-set {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: nowrap;
   flex-shrink: 0;
   gap: 1.75rem;
-  padding-inline-end: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 @keyframes skill-marquee {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-33.333%);
+    transform: translate3d(calc(-1 * var(--marquee-distance, 33.333%)), 0, 0);
   }
 }
 
-.skill-card {
-  flex: 0 0 160px;
-  scroll-snap-align: center;
+article.skill-card {
+  flex: 0 0 7.5rem;
+  width: 7.5rem;
+  min-width: 7.5rem;
+  max-width: 7.5rem;
+  scroll-snap-align: unset;
   background: transparent;
   border-radius: 1.35rem;
   padding: 0.35rem 0.5rem 0.5rem;
@@ -870,6 +898,14 @@ article .icon {
   transform: scale(1.03);
 }
 
+.project-card:hover .project-img--openly {
+  transform: scale(1.24);
+}
+
+.project-image-container:has(.project-img--openly) {
+  background: #163c2e;
+}
+
 .project-image-container {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -891,6 +927,11 @@ article .icon {
   object-fit: contain;
   object-position: center;
   transition: transform 0.6s ease;
+}
+
+.project-img--openly {
+  object-fit: cover;
+  transform: scale(1.2);
 }
 
 .project-title {

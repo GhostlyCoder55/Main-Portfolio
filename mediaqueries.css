@@ -21,8 +21,11 @@
   .project-title {
     font-size: 1.1rem;
   }
-  .skill-card {
-    flex-basis: 148px;
+  article.skill-card {
+    flex: 0 0 7.25rem;
+    width: 7.25rem;
+    min-width: 7.25rem;
+    max-width: 7.25rem;
   }
   .about-intro {
     gap: 2.5rem;
@@ -74,8 +77,11 @@
   .project-title {
     font-size: 1rem;
   }
-  .skill-card {
-    flex-basis: 140px;
+  article.skill-card {
+    flex: 0 0 7rem;
+    width: 7rem;
+    min-width: 7rem;
+    max-width: 7rem;
   }
   .skill-card-logo {
     width: 76px;
@@ -107,8 +113,11 @@
   .project-image-container {
     height: auto;
   }
-  .skill-card {
-    flex-basis: 150px;
+  article.skill-card {
+    flex: 0 0 7.25rem;
+    width: 7.25rem;
+    min-width: 7.25rem;
+    max-width: 7.25rem;
   }
 }
 
@@ -128,8 +137,11 @@
   .skill-row-title {
     font-size: 1.2rem;
   }
-  .skill-card {
-    flex-basis: 136px;
+  article.skill-card {
+    flex: 0 0 6.75rem;
+    width: 6.75rem;
+    min-width: 6.75rem;
+    max-width: 6.75rem;
   }
   .about-shell {
     gap: 2.5rem;
@@ -183,9 +195,12 @@
   .skill-row-title {
     font-size: 1.1rem;
   }
-  .skill-card {
-    flex-basis: 128px;
-    padding: 0.9rem 0.7rem;
+  article.skill-card {
+    flex: 0 0 6.5rem;
+    width: 6.5rem;
+    min-width: 6.5rem;
+    max-width: 6.5rem;
+    padding: 0.35rem 0.25rem 0.5rem;
   }
   .skill-card-logo {
     width: 68px;

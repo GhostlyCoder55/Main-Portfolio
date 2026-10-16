@@ -75,7 +75,26 @@ function Experience() {
   `;
 }
 
+function sizeMarquees() {
+  document.querySelectorAll(".skill-track").forEach((track) => {
+    const set = track.querySelector(".skill-track-set");
+    if (!set) {
+      return;
+    }
+    track.style.setProperty("--marquee-distance", `${set.offsetWidth}px`);
+  });
+}
+
 const root = document.getElementById("experience-root");
 if (root) {
   createRoot(root).render(html`<${Experience} />`);
+  const measure = () => window.requestAnimationFrame(sizeMarquees);
+  measure();
+  window.addEventListener("resize", measure);
+  window.addEventListener("orientationchange", measure);
+  document.querySelectorAll(".skill-card-icon").forEach((img) => {
+    if (!img.complete) {
+      img.addEventListener("load", measure, { once: true });
+    }
+  });
 }
