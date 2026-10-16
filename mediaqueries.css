@@ -34,8 +34,7 @@
 
 @media screen and (max-width: 1200px) {
   #hamburger-nav {
-    top: 1.5rem;
-    right: 1.5rem;
+    padding: 1.15rem 1.75rem;
   }
   section {
     max-width: 860px;
