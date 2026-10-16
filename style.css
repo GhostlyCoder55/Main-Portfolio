@@ -1140,37 +1140,41 @@ body.preview-open {
 
 .contact-btn-container {
   margin: 1.5rem auto 0;
-  gap: 0.75rem;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.btn.contact-btn {
-  width: auto;
-  min-width: 0;
-  padding: 0.6rem 1.15rem;
-  font-size: 0.9rem;
+.contact-icon-btn {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.btn.contact-btn img {
-  width: 1.15rem;
-  height: 1.15rem;
-  max-width: 1.2rem;
-  max-height: 1.2rem;
-  object-fit: contain;
+.contact-icon-btn img {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
   pointer-events: none;
-  flex-shrink: 0;
 }
 
-.btn.contact-btn .contact-btn-icon-email {
-  width: 1.3rem;
-  height: 1.3rem;
-  max-width: 1.3rem;
-  max-height: 1.3rem;
+.contact-icon-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(129, 13, 145, 0.4));
+}
+
+.contact-icon-btn:focus-visible {
+  outline: 2px solid #810d91;
+  outline-offset: 3px;
 }
 
 /* Minimal footer */

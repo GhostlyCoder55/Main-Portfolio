@@ -210,9 +210,14 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .contact-btn {
-    padding: 0.55rem 1rem;
-    font-size: 0.85rem;
+  .contact-icon-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .contact-icon-btn img {
+    width: 2.5rem;
+    height: 2.5rem;
   }
   footer {
     padding: 1rem 0;
