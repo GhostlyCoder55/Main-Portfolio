@@ -1,0 +1,5 @@
+# app-ads.txt for CheerUp!
+# IAB Tech Lab Authorized Sellers for Apps specification
+# https://iabtechlab.com/ads-txt/
+
+google.com, pub-8075634631393674, DIRECT, f08c47fec0942fa0
